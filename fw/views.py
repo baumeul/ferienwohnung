@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def fw_list(request):
+    return render(request, 'fw/fw_list.html', {})
