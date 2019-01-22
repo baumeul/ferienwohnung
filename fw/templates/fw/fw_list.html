@@ -1,22 +1,20 @@
 <html>
-    <head>
-        <title>Ferienwohnung</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="/">Ferienwohnung am Gardasee</a></h1>
-        </div>
+<head>
+  <title>Ferienwohnung</title>
+</head>
+<body>
+<div>
+  <h1><a href="/">Ferienwohnung am Gardasee</a></h1>
+</div>
 
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">Erste Buchung</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        </div>
+<div>
+    {% for gast in gaeste %}
+      <div>
+        <h2><a href="">{{ gast.full_name }}</a></h2>
+        (created: {{ gast.created }} created by: {{ gast.created_by }})
+      </div>
+    {% endfor %}
+</div>
 
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">Zweite Buchung</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
-        </div>
-    </body>
+</body>
 </html>
